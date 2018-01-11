@@ -13,6 +13,18 @@ class ActionViewController: UIViewController {
 
     @IBOutlet weak var imageView: UIImageView!
 
+    private func loadImage(from imageURL: NSSecureCoding?) {
+        OperationQueue.main.addOperation {
+            weak var weakImageView = self.imageView
+
+            if let strongImageView = weakImageView {
+                if let imageURL = imageURL as? URL {
+                    strongImageView.image = UIImage(data: try! Data(contentsOf: imageURL))
+                }
+            }
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
     
@@ -27,15 +39,9 @@ class ActionViewController: UIViewController {
             for provider in item.attachments! as! [NSItemProvider] {
                 if provider.hasItemConformingToTypeIdentifier(kUTTypeImage as String) {
                     // This is an image. We'll load it, then place it in our image view.
-                    weak var weakImageView = self.imageView
                     provider.loadItem(forTypeIdentifier: kUTTypeImage as String, options: nil, completionHandler: { (imageURL, error) in
-                        OperationQueue.main.addOperation {
-                            if let strongImageView = weakImageView {
-                                if let imageURL = imageURL as? URL {
-                                    strongImageView.image = UIImage(data: try! Data(contentsOf: imageURL))
-                                }
-                            }
-                        }
+                        
+                        self.loadImage(from: imageURL)
                     })
                     
                     imageFound = true
