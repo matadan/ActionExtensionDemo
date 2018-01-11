@@ -14,6 +14,9 @@
 		A1A605B32007814900F14C98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A605B12007814900F14C98 /* LaunchScreen.storyboard */; };
 		A1A605BE2007814900F14C98 /* ActionExtensionDemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A605BD2007814900F14C98 /* ActionExtensionDemoTests.swift */; };
 		A1A605C92007814900F14C98 /* ActionExtensionDemoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A605C82007814900F14C98 /* ActionExtensionDemoUITests.swift */; };
+		A1A605DD2007823100F14C98 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A605DC2007823100F14C98 /* ActionViewController.swift */; };
+		A1A605E02007823100F14C98 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A605DE2007823100F14C98 /* MainInterface.storyboard */; };
+		A1A605E42007823100F14C98 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1A605DA2007823100F14C98 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,7 +34,28 @@
 			remoteGlobalIDString = A1A605A42007814900F14C98;
 			remoteInfo = ActionExtensionDemo;
 		};
+		A1A605E22007823100F14C98 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A1A6059D2007814900F14C98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A1A605D92007823100F14C98;
+			remoteInfo = ActionExtension;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		A1A605E82007823100F14C98 /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				A1A605E42007823100F14C98 /* ActionExtension.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		A1A605A52007814900F14C98 /* ActionExtensionDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ActionExtensionDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -47,6 +71,10 @@
 		A1A605C42007814900F14C98 /* ActionExtensionDemoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ActionExtensionDemoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A1A605C82007814900F14C98 /* ActionExtensionDemoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionExtensionDemoUITests.swift; sourceTree = "<group>"; };
 		A1A605CA2007814900F14C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A605DA2007823100F14C98 /* ActionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = ActionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		A1A605DC2007823100F14C98 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
+		A1A605DF2007823100F14C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
+		A1A605E12007823100F14C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +99,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1A605D72007823100F14C98 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -80,6 +115,7 @@
 				A1A605A72007814900F14C98 /* ActionExtensionDemo */,
 				A1A605BC2007814900F14C98 /* ActionExtensionDemoTests */,
 				A1A605C72007814900F14C98 /* ActionExtensionDemoUITests */,
+				A1A605DB2007823100F14C98 /* ActionExtension */,
 				A1A605A62007814900F14C98 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -90,6 +126,7 @@
 				A1A605A52007814900F14C98 /* ActionExtensionDemo.app */,
 				A1A605B92007814900F14C98 /* ActionExtensionDemoTests.xctest */,
 				A1A605C42007814900F14C98 /* ActionExtensionDemoUITests.xctest */,
+				A1A605DA2007823100F14C98 /* ActionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -125,6 +162,16 @@
 			path = ActionExtensionDemoUITests;
 			sourceTree = "<group>";
 		};
+		A1A605DB2007823100F14C98 /* ActionExtension */ = {
+			isa = PBXGroup;
+			children = (
+				A1A605DC2007823100F14C98 /* ActionViewController.swift */,
+				A1A605DE2007823100F14C98 /* MainInterface.storyboard */,
+				A1A605E12007823100F14C98 /* Info.plist */,
+			);
+			path = ActionExtension;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,10 +182,12 @@
 				A1A605A12007814900F14C98 /* Sources */,
 				A1A605A22007814900F14C98 /* Frameworks */,
 				A1A605A32007814900F14C98 /* Resources */,
+				A1A605E82007823100F14C98 /* Embed App Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				A1A605E32007823100F14C98 /* PBXTargetDependency */,
 			);
 			name = ActionExtensionDemo;
 			productName = ActionExtensionDemo;
@@ -181,6 +230,23 @@
 			productReference = A1A605C42007814900F14C98 /* ActionExtensionDemoUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		A1A605D92007823100F14C98 /* ActionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A1A605E52007823100F14C98 /* Build configuration list for PBXNativeTarget "ActionExtension" */;
+			buildPhases = (
+				A1A605D62007823100F14C98 /* Sources */,
+				A1A605D72007823100F14C98 /* Frameworks */,
+				A1A605D82007823100F14C98 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActionExtension;
+			productName = ActionExtension;
+			productReference = A1A605DA2007823100F14C98 /* ActionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -205,6 +271,10 @@
 						ProvisioningStyle = Automatic;
 						TestTargetID = A1A605A42007814900F14C98;
 					};
+					A1A605D92007823100F14C98 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
 				};
 			};
 			buildConfigurationList = A1A605A02007814900F14C98 /* Build configuration list for PBXProject "ActionExtensionDemo" */;
@@ -223,6 +293,7 @@
 				A1A605A42007814900F14C98 /* ActionExtensionDemo */,
 				A1A605B82007814900F14C98 /* ActionExtensionDemoTests */,
 				A1A605C32007814900F14C98 /* ActionExtensionDemoUITests */,
+				A1A605D92007823100F14C98 /* ActionExtension */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +320,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A1A605D82007823100F14C98 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A605E02007823100F14C98 /* MainInterface.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,6 +359,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		A1A605D62007823100F14C98 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A1A605DD2007823100F14C98 /* ActionViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -292,6 +379,11 @@
 			isa = PBXTargetDependency;
 			target = A1A605A42007814900F14C98 /* ActionExtensionDemo */;
 			targetProxy = A1A605C52007814900F14C98 /* PBXContainerItemProxy */;
+		};
+		A1A605E32007823100F14C98 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A1A605D92007823100F14C98 /* ActionExtension */;
+			targetProxy = A1A605E22007823100F14C98 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -310,6 +402,14 @@
 				A1A605B22007814900F14C98 /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		A1A605DE2007823100F14C98 /* MainInterface.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A1A605DF2007823100F14C98 /* Base */,
+			);
+			name = MainInterface.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -425,6 +525,7 @@
 		A1A605CE2007814900F14C98 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LELYLPEANY;
@@ -440,6 +541,7 @@
 		A1A605CF2007814900F14C98 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = LELYLPEANY;
@@ -518,6 +620,36 @@
 			};
 			name = Release;
 		};
+		A1A605E62007823100F14C98 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LELYLPEANY;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoist.ActionExtensionDemo.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A1A605E72007823100F14C98 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LELYLPEANY;
+				INFOPLIST_FILE = ActionExtension/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.naoist.ActionExtensionDemo.ActionExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -553,6 +685,15 @@
 			buildConfigurations = (
 				A1A605D42007814900F14C98 /* Debug */,
 				A1A605D52007814900F14C98 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A1A605E52007823100F14C98 /* Build configuration list for PBXNativeTarget "ActionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A1A605E62007823100F14C98 /* Debug */,
+				A1A605E72007823100F14C98 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
