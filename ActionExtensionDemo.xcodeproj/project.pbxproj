@@ -17,6 +17,7 @@
 		A1A605DD2007823100F14C98 /* ActionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A605DC2007823100F14C98 /* ActionViewController.swift */; };
 		A1A605E02007823100F14C98 /* MainInterface.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A1A605DE2007823100F14C98 /* MainInterface.storyboard */; };
 		A1A605E42007823100F14C98 /* ActionExtension.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = A1A605DA2007823100F14C98 /* ActionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		A1A605EC2007934A00F14C98 /* ConsoleLogger.swift in Sources */ = {isa = PBXBuildFile; fileRef = A1A605EB2007934A00F14C98 /* ConsoleLogger.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +76,7 @@
 		A1A605DC2007823100F14C98 /* ActionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActionViewController.swift; sourceTree = "<group>"; };
 		A1A605DF2007823100F14C98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/MainInterface.storyboard; sourceTree = "<group>"; };
 		A1A605E12007823100F14C98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A1A605EB2007934A00F14C98 /* ConsoleLogger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsoleLogger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -168,6 +170,7 @@
 				A1A605DC2007823100F14C98 /* ActionViewController.swift */,
 				A1A605DE2007823100F14C98 /* MainInterface.storyboard */,
 				A1A605E12007823100F14C98 /* Info.plist */,
+				A1A605EB2007934A00F14C98 /* ConsoleLogger.swift */,
 			);
 			path = ActionExtension;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A1A605DD2007823100F14C98 /* ActionViewController.swift in Sources */,
+				A1A605EC2007934A00F14C98 /* ConsoleLogger.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

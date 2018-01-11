@@ -16,6 +16,8 @@ class ActionViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
     
+        log("viewDidLoad")
+        
         // Get the item[s] we're handling from the extension context.
         
         // For example, look for an image and place it into an image view.
@@ -54,9 +56,16 @@ class ActionViewController: UIViewController {
     }
 
     @IBAction func done() {
+        log("done tapped")
+        
         // Return any edited content to the host app.
         // This template doesn't do anything, so we just echo the passed in items.
         self.extensionContext!.completeRequest(returningItems: self.extensionContext!.inputItems, completionHandler: nil)
     }
+}
 
+extension ActionViewController: ConsoleLogging {
+    var appID: String {
+        return "ActionExtensionDemo"
+    }
 }
